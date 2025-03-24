@@ -2,7 +2,6 @@ import { BrowserProvider, Contract } from "ethers";
 import Web3Modal from "web3modal";
 
 import { contractAddress, contractABI } from "@/Context/Constants";
-import { time } from "console";
 
 //check
 export const isWalletConnected = async () => {
