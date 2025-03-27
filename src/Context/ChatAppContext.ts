@@ -4,7 +4,7 @@ import { useState, useEffect, createContext } from 'react';
 import { useRouter } from 'next/navigation';
 import { isWalletConnected, connectWallet, connectingWithContract } from '../utils/apiFeature';
 
-interface ChatAppContextType {
+export interface ChatAppContextType {
     readMessage: (friendPubKey: string) => Promise<void>;
     createAccount: (name: string) => Promise<void>;
     addFriend: (friendPubKey: string, friendName: string) => Promise<void>;
@@ -188,6 +188,8 @@ export const useChatAppProvider = () => {
         sendMessage,
         getAllUsers,
         readUserInfo, // function to get current user's info
+        isWalletConnected,
+        connectWallet,
         Account,
         userName,
         friendLists,
